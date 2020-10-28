@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: serverside-ui
+  name: serverside-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: serverside-ui
+  template:
+    metadata:
+      labels:
+        app: serverside-ui
+    spec:
+      containers:
+        - env:
+            - name: masterUrl
+              value: "https://111.111.111.111:6443"
+            - name: token
+              value: ""
+            - name: spring.profiles.active
+              value: test
+            - name: namespace
+              value: test
+            - name: proxy.server.uiIp
+              value: "111.111.111.112"
+            - name: proxy.server.nodePort
+              value: "31113"
+            - name: proxy.server.proxyIp
+              value: "serverside-ui"
+          image: registry.cn-hangzhou.aliyuncs.com/19/serverside-ui:0.0.1
+          imagePullPolicy: Always
+          name: serverside-ui

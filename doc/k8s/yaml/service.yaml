@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: serverside-ui
+  name: serverside-ui
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+    - name: 9091-9091
+      nodePort: 31191
+      port: 9091
+      protocol: TCP
+      targetPort: 9091
+    - name: 9013-9013
+      nodePort: 31113
+      port: 9013
+      protocol: TCP
+      targetPort: 9013
+    - name: 9014-9014
+      nodePort: 31114
+      port: 9014
+      protocol: TCP
+      targetPort: 9014
+  selector:
+    app: serverside-ui
+  type: NodePort

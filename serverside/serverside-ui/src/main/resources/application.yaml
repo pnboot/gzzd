@@ -1,0 +1,73 @@
+spring:
+  profiles:
+    active: debug
+  application:
+    name: ui
+  datasource:
+    url: jdbc:h2:mem:testdb
+    hikari:
+      jdbc-url: jdbc:h2:mem:testdb
+      connection-test-query: SELECT 1
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+
+server:
+  port: 9091
+
+# ip:http_port:websocket_port
+proxy:
+  url: "localhost:9091:9013"
+  server:
+    port: 9013
+  agent:
+    newport: 9014
+
+
+config:
+  file:
+    path:
+      format: "{0}src/main/java/{1}.java"
+  jar:
+    guarantee:
+      period:
+        days: 2
+  admins: admin
+  agent:
+    lastVersion: 1.0
+    proxy: http://%s:%d/proxy/agent/get
+    meta:
+      refresh: http://%s:%d/proxy/agent/metaRefresh
+
+
+---
+spring:
+  profiles:
+    - debug
+proxy:
+  server:
+    # 本机ip，给浏览器和pod访问
+    ip: 192.168.10.146
+    # 和浏览器建立ws链接的端口，在集群里需要暴露为 node port
+    nodePort: 9013
+
+masterUrl: ""
+token: ""
+namespace: dev
+---
+spring:
+  profiles:
+    - dev
+proxy:
+  server:
+    # 给浏览器访问
+    uiIp: 192.168.10.146
+    # 给 pod 访问
+    proxyIp: 192.168.10.146
+    # 和浏览器建立ws链接的端口，在集群里需要暴露为 node port
+    nodePort: 9013
+masterUrl: ""
+token: ""
+namespace: dev

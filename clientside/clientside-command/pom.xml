@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>clientside</artifactId>
+        <groupId>gzzd</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>clientside-command</artifactId>
+
+    <properties>
+
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>gzzd</groupId>
+            <artifactId>clientside-agent-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>gzzd</groupId>
+            <artifactId>clientside-decompiler-fernflower</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taobao.arthas</groupId>
+            <artifactId>arthas-core</artifactId>
+            <version>3.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.taobao.arthas</groupId>
+            <artifactId>arthas-spy</artifactId>
+            <version>3.1.4</version>
+        </dependency>
+
+    </dependencies>
+</project>
