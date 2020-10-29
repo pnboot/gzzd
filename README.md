@@ -47,7 +47,7 @@ browser <-> serverside-ui <-> agent <-> target_jvm
 1. 在根目录执行 mvn clean package install ,打包所有模块到本地 maven 仓库
 2. 配置 kubernetes api server 参数，和 websocket nodeport 参数
 3. 运行 ServersideApplication 启动类
-4. 访问 127.0.0.1：9091 端口
+4. 访问 127.0.0.1:9091 端口
 5. 登录 admin/123456
 6. 切换到主机信息，选择一个实例
 7. 稍等3-5秒，即可看到实例信息 
