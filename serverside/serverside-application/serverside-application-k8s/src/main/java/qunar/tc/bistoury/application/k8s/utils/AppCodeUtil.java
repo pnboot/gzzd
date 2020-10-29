@@ -2,7 +2,7 @@ package qunar.tc.bistoury.application.k8s.utils;
 
 public class AppCodeUtil {
 
-    private static final String SPLITER = ":";
+    private static final String SPLITER = "_";
 
     public static String buildAppCode(String namespace, String name) {
         return namespace + SPLITER + name;
