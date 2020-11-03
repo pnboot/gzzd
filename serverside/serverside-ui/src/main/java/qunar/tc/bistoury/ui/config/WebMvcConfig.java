@@ -1,19 +1,10 @@
 package qunar.tc.bistoury.ui.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
-import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.StringHttpMessageConverter;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.*;
 import qunar.tc.bistoury.ui.security.LoginInterceptor;
-
-import java.nio.charset.Charset;
 
 @Configuration
 @ComponentScan
@@ -25,6 +16,16 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Autowired
     SuffixPatternInterceptor suffixPatternInterceptor;
+
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("*")
+                .allowedMethods("POST", "GET", "PUT", "OPTIONS", "DELETE")
+                .maxAge(3600)
+                .allowCredentials(true);
+    }
 
 //    @Bean
 //    public HttpMessageConverter<String> responseBodyConverter() {
