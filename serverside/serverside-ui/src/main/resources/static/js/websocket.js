@@ -32,6 +32,7 @@
                 command: bistouryWS.proxy[agentIp] ? newCommand : oldCommand,
                 token: bistouryWS.getToken()
             };
+            console.log("websocket.js 35 send context-->",content)
             var data = bistouryWS.encrypt(JSON.stringify(content));
             ws.send(data);
         }).fail(function () {
@@ -89,6 +90,7 @@
                 };
 
                 ws.onmessage = function (event) {
+                    console.log("event->",event);
                     if (bistouryWS.wsList[host] == null) {
                         return;
                     }
@@ -134,6 +136,7 @@
         var len = dataView.getInt32(16);
         //8+4+4+4
         var content = Utf8ArrayToStr(new Uint8Array(data.slice(20, 20 + len)));
+        console.log("websocket.js 138 recv content->",content);
         if (!bistoury.check(id, type, content)) {
             console.log(content)
             callBack(stopFunc, type);
