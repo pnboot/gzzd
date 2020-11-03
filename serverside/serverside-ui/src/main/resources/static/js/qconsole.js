@@ -726,8 +726,8 @@ $(document).ready(function () {
                         command: input,
                         token: getToken()
                     };
+                    console.log("qconsole.js content -> ",content);
                     var data = encrypt(JSON.stringify(content));
-
                     ws.send(data);
                 }).fail(function () {
                     context.wsOpen.remove(host);
