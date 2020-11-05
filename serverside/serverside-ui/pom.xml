@@ -5,7 +5,7 @@
     <parent>
         <artifactId>serverside</artifactId>
         <groupId>gzzd</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>gzzd</groupId>
             <artifactId>serverside-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>org.java-websocket</groupId>
@@ -40,7 +40,7 @@
         <dependency>
             <groupId>gzzd</groupId>
             <artifactId>serverside-application-k8s</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -55,6 +55,23 @@
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <configuration>
+                    <mainClass>qunar.tc.bistoury.ServersideApplication</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
@@ -73,14 +90,14 @@
                         <image>openjdk:8-jdk-slim</image>
                     </from>
                     <to>
-                        <image>${project.name}</image>
-                        <tags>
-                            <tag>${project.version}</tag>
-                        </tags>
-<!--                        <image>registry.cn-hangzhou.aliyuncs.com/19/serverside-ui</image>-->
+<!--                        <image>${project.name}</image>-->
 <!--                        <tags>-->
-<!--                            <tag>0.0.1</tag>-->
+<!--                            <tag>${project.version}</tag>-->
 <!--                        </tags>-->
+                        <image>registry.cn-hangzhou.aliyuncs.com/19/serverside-ui</image>
+                        <tags>
+                            <tag>0.0.1</tag>
+                        </tags>
                     </to>
                 </configuration>
             </plugin>

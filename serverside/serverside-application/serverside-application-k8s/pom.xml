@@ -5,7 +5,7 @@
     <parent>
         <artifactId>serverside-application</artifactId>
         <groupId>gzzd</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -21,7 +21,7 @@
         <dependency>
             <artifactId>serverside-application-api</artifactId>
             <groupId>gzzd</groupId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

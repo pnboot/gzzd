@@ -5,7 +5,8 @@
     <parent>
         <artifactId>gzzd-all</artifactId>
         <groupId>gzzd</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -15,9 +16,10 @@
         <module>attach-common</module>
         <module>attach-arthas</module>
         <module>instrument</module>
+        <module>instrument/instrument-spy</module>
         <module>instrument/instrument-agent</module>
         <module>instrument/instrument-client</module>
-        <module>instrument/instrument-spy</module>
+
         <module>instrument/magic-classes</module>
         <module>instrument/magic-loader</module>
     </modules>
@@ -27,7 +29,7 @@
         <dependency>
             <groupId>gzzd</groupId>
             <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

@@ -3,10 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-
     <groupId>gzzd</groupId>
     <artifactId>gzzd-all</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <modules>
         <module>common</module>
         <module>serverside</module>
@@ -20,6 +19,7 @@
     <description>gzzd</description>
 
     <properties>
+        <revision>0.0.1-SNAPSHOT</revision>
         <guava.version>20.0</guava.version>
         <jackson.version>2.10.2</jackson.version>
         <slf4j.version>1.7.29</slf4j.version>
@@ -33,17 +33,16 @@
     <dependencies>
 
 
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.68</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.projectlombok</groupId>-->
+        <!--            <artifactId>lombok</artifactId>-->
+        <!--            <optional>true</optional>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.alibaba</groupId>-->
+        <!--            <artifactId>fastjson</artifactId>-->
+        <!--            <version>1.2.68</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
@@ -182,6 +181,17 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>com.taobao.arthas</groupId>
+                <artifactId>arthas-core</artifactId>
+                <version>3.1.4</version>
+            </dependency>
+            <dependency>
+                <groupId>com.taobao.arthas</groupId>
+                <artifactId>arthas-spy</artifactId>
+                <version>3.1.4</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>

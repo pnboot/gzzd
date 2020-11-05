@@ -3,10 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>attach</artifactId>
+        <artifactId>instrument</artifactId>
         <groupId>gzzd</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -22,7 +22,6 @@
         <dependency>
             <groupId>com.taobao.arthas</groupId>
             <artifactId>arthas-spy</artifactId>
-            <version>3.1.4</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
