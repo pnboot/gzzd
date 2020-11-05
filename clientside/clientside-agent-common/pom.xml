@@ -16,7 +16,7 @@
         <dependency>
             <groupId>gzzd</groupId>
             <artifactId>clientside-common</artifactId>
-            <version>${revision}</version>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>

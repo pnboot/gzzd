@@ -35,3 +35,4 @@ dist
 package-lock.json
 .vscode
 /k8s/src/test/resources/conf.properties
+.flattened-pom.xml

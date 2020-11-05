@@ -20,12 +20,12 @@
         <dependency>
             <groupId>gzzd</groupId>
             <artifactId>clientside-agent-common</artifactId>
-            <version>${revision}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>gzzd</groupId>
             <artifactId>clientside-decompiler-fernflower</artifactId>
-            <version>${revision}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.taobao.arthas</groupId>

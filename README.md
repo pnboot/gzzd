@@ -59,7 +59,11 @@ browser <-> serverside-ui <-> agent <-> target_jvm
 
 ### 集群部署方法：
 
-以 dev 空间的 ssui-dev-platform 为例 ,首先需要构建 ui 的镜像包，也可以用我打好的镜像
+参考[k8s部署](doc/README.md#如何在集群部署)
+
+## 构建
+参考[本地构建](doc/README.md#如何构建服务镜像)
 
 
   
+

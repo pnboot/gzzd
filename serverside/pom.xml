@@ -6,6 +6,7 @@
         <artifactId>gzzd-all</artifactId>
         <groupId>gzzd</groupId>
         <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -21,7 +22,7 @@
         <dependency>
             <groupId>gzzd</groupId>
             <artifactId>common</artifactId>
-            <version>${revision}</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

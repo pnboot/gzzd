@@ -23,7 +23,7 @@
         <dependency>
             <groupId>gzzd</groupId>
             <artifactId>common</artifactId>
-            <version>${revision}</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

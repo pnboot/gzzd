@@ -6,6 +6,7 @@
         <artifactId>serverside</artifactId>
         <groupId>gzzd</groupId>
         <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -19,7 +20,7 @@
         <dependency>
             <groupId>gzzd</groupId>
             <artifactId>serverside-common</artifactId>
-            <version>${revision}</version>
+            <version>${project.version}</version>
         </dependency>
 
     </dependencies>

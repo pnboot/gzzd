@@ -18,7 +18,12 @@
         <dependency>
             <groupId>gzzd</groupId>
             <artifactId>serverside-common</artifactId>
-            <version>${revision}</version>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>gzzd</groupId>
+            <artifactId>serverside-application-k8s</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.java-websocket</groupId>
@@ -37,11 +42,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-        <dependency>
-            <groupId>gzzd</groupId>
-            <artifactId>serverside-application-k8s</artifactId>
-            <version>${revision}</version>
-        </dependency>
+
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -55,24 +56,6 @@
 
     <build>
         <plugins>
-
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-
-                <configuration>
-                    <mainClass>qunar.tc.bistoury.ServersideApplication</mainClass>
-                    <layout>ZIP</layout>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
@@ -90,10 +73,10 @@
                         <image>openjdk:8-jdk-slim</image>
                     </from>
                     <to>
-<!--                        <image>${project.name}</image>-->
-<!--                        <tags>-->
-<!--                            <tag>${project.version}</tag>-->
-<!--                        </tags>-->
+                        <!--                        <image>${project.name}</image>-->
+                        <!--                        <tags>-->
+                        <!--                            <tag>${project.version}</tag>-->
+                        <!--                        </tags>-->
                         <image>registry.cn-hangzhou.aliyuncs.com/19/serverside-ui</image>
                         <tags>
                             <tag>0.0.1</tag>
