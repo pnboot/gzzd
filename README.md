@@ -64,6 +64,8 @@ browser <-> serverside-ui <-> agent <-> target_jvm
 ## 构建
 参考[本地构建](doc/README.md#如何构建服务镜像)
 
+## 联系我
+遇到问题先翻 issue，找不到就提一个新的吧。问题/想法加我微信一起学习讨论。
 
-  
+![image](https://user-images.githubusercontent.com/11847818/130450201-83353069-553e-432d-8492-db6bb674f845.png)
 
